@@ -6,6 +6,7 @@ import NavbarMenu from '@/components/Navbar'
 export default function HeroSection() {
   const imagePath = '/assets/Hero/HeroBackground.png'
   const [isTranslatorOpen, setIsTranslatorOpen] = useState(false)
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
   const [scale, setScale] = useState(1)
   const baseWidth = 1920 // Base design width in pixels
   
@@ -30,8 +31,165 @@ export default function HeroSection() {
         backgroundImage: `url("${imagePath}")`,
       }}
     >
-      {/* Responsive wrapper container - scales all content proportionally */}
+      {/* Mobile Navbar - shown only on mobile, outside scaling wrapper */}
+      <nav 
+        className="flex md:hidden absolute left-1/2 -translate-x-1/2 justify-center items-center"
+        style={{
+          top: '10px',
+          width: '362px',
+          height: '58px',
+          padding: '10px 17px',
+          gap: '56px',
+          borderRadius: '16px',
+          border: '3px solid #928D86',
+          background: '#4C4C4C',
+          boxShadow: '-1px 2px 20px 0 rgba(0, 0, 0, 0.35) inset',
+          zIndex: 10,
+        }}
+      >
+        {/* Maskot PEPELAYER Logo */}
+        <div
+          style={{
+            width: '35px',
+            height: '35px',
+            flexShrink: 0,
+            backgroundImage: "url('/assets/Navbar/Maskot PEPELAYER.png')",
+            backgroundPosition: '50%',
+            backgroundSize: 'cover',
+            backgroundRepeat: 'no-repeat',
+          }}
+        />
+        
+        {/* PepeLayer Logo */}
+        <div
+          style={{
+            width: '160px',
+            height: '69px',
+            flexShrink: 0,
+            aspectRatio: '160/69',
+            backgroundImage: "url('/assets/Navbar/PepeLayer.png')",
+            backgroundPosition: '50%',
+            backgroundSize: 'cover',
+            backgroundRepeat: 'no-repeat',
+          }}
+        />
+        
+        {/* Hamburger Menu Icon */}
+        <button
+          type="button"
+          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+          style={{
+            width: '35px',
+            height: '35px',
+            flexShrink: 0,
+            background: 'transparent',
+            border: 'none',
+            cursor: 'pointer',
+            padding: 0,
+          }}
+        >
+          <img
+            src="/assets/Navbar/Hamburger.svg"
+            alt="Menu"
+            style={{
+              width: '100%',
+              height: '100%',
+              objectFit: 'contain',
+            }}
+          />
+        </button>
+      </nav>
+      
+      {/* Mobile Menu - slides in from right */}
       <div
+        className="fixed md:hidden top-0 right-0 z-50"
+        style={{
+          width: isMobileMenuOpen ? '382px' : '0px',
+          height: '653px',
+          borderRadius: '16px',
+          border: '3px solid #928D86',
+          background: '#4C4C4C',
+          boxShadow: '3px 1px 25px 0 rgba(0, 0, 0, 0.65) inset',
+          transform: isMobileMenuOpen ? 'translateX(0)' : 'translateX(100%)',
+          transition: 'transform 0.3s ease-in-out, width 0.3s ease-in-out',
+          overflow: 'hidden',
+        }}
+      >
+        {/* Close navigation Section */}
+        <div
+          style={{
+            display: 'inline-flex',
+            padding: '10px 10px 10px 4px',
+            alignItems: 'center',
+            gap: '114px',
+          }}
+        >
+          <div
+            style={{
+              display: 'flex',
+              padding: '10px',
+              alignItems: 'center',
+              gap: '10px',
+            }}
+          >
+            {/* Maskot PEPELAYER Logo */}
+            <div
+              style={{
+                width: '60px',
+                height: '60px',
+                backgroundImage: "url('/assets/Navbar/Maskot PEPELAYER.png')",
+                backgroundPosition: '50%',
+                backgroundSize: 'cover',
+                backgroundRepeat: 'no-repeat',
+              }}
+            />
+            
+            {/* PepeLayer Logo */}
+            <div
+              style={{
+                width: '128px',
+                height: '69px',
+                aspectRatio: '128/69',
+                backgroundImage: "url('/assets/Navbar/PepeLayer.png')",
+                backgroundPosition: '-18.52px 0px',
+                backgroundSize: '125.812% 100%',
+                backgroundRepeat: 'no-repeat',
+              }}
+            />
+          </div>
+          
+          {/* Close button */}
+          <button
+            type="button"
+            onClick={() => setIsMobileMenuOpen(false)}
+            style={{
+              display: 'flex',
+              width: '40px',
+              flexDirection: 'column',
+              alignItems: 'flex-start',
+              gap: '10px',
+              background: 'transparent',
+              border: 'none',
+              cursor: 'pointer',
+              padding: 0,
+            }}
+          >
+            <img
+              src="/assets/Navbar/close.svg"
+              alt="Close"
+              style={{
+                width: '100%',
+                height: 'auto',
+                objectFit: 'contain',
+              }}
+            />
+          </button>
+        </div>
+      </div>
+      
+      {/* Responsive wrapper container - scales all content proportionally (desktop only) */}
+      <div
+        className="hidden md:block"
         style={{
           width: `${baseWidth}px`,
           height: '1080px', // Base height for 16:9 aspect ratio (1920x1080)
@@ -43,6 +201,7 @@ export default function HeroSection() {
         }}
       >
         <div className="relative z-10 h-full">
+          {/* Desktop Navbar - hidden on mobile */}
           <NavbarMenu />
         
         {/* En.svg image - Clickable button */}

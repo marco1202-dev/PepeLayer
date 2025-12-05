@@ -1,12 +1,29 @@
+'use client'
+
+import { useState, useEffect } from 'react'
 import NavbarMenu from '@/components/Navbar'
 
 export default function StakingSection() {
+  const [scale, setScale] = useState(1)
+  const baseWidth = 1920 // Base design width in pixels
+
+  useEffect(() => {
+    const updateScale = () => {
+      const viewportWidth = window.innerWidth
+      // Scale based on viewport width, maintaining aspect ratio
+      const newScale = Math.min(viewportWidth / baseWidth, 1)
+      setScale(newScale)
+    }
+    
+    updateScale()
+    window.addEventListener('resize', updateScale)
+    return () => window.removeEventListener('resize', updateScale)
+  }, [])
+
   return (
     <section 
-      className="w-full bg-cover bg-center bg-no-repeat bg-gray-300 relative"
+      className="w-full bg-cover bg-center bg-no-repeat bg-gray-300 relative overflow-hidden"
       style={{
-        width: '1920px',
-        height: '1280px',
         aspectRatio: '3/2',
         backgroundImage: "url('/assets/Staking/staking.png')",
         backgroundPosition: '50%',
@@ -14,6 +31,18 @@ export default function StakingSection() {
         backgroundRepeat: 'no-repeat',
       }}
     >
+      {/* Responsive wrapper container - scales all content proportionally */}
+      <div
+        style={{
+          width: `${baseWidth}px`,
+          height: '1280px', // Base height for the staking section
+          position: 'absolute',
+          top: 0,
+          left: '50%',
+          transform: `translateX(-50%) scale(${scale})`,
+          transformOrigin: 'top center',
+        }}
+      >
       <div className="relative z-10 h-full">
         <NavbarMenu />
       </div>
@@ -635,6 +664,8 @@ export default function StakingSection() {
           0 $PLR
         </span>
       </div>
+      </div>
+      {/* End of responsive wrapper */}
     </section>
   )
 }

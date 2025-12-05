@@ -1,20 +1,47 @@
 'use client'
 
+import { useState, useEffect } from 'react'
 import NavbarMenu from '@/components/Navbar'
 import { useRouter } from 'next/navigation'
 
 export default function WhitePaper() {
   const router = useRouter()
+  const [scale, setScale] = useState(1)
+  const baseWidth = 1920 // Base design width in pixels
+
+  useEffect(() => {
+    const updateScale = () => {
+      const viewportWidth = window.innerWidth
+      // Scale based on viewport width, maintaining aspect ratio
+      const newScale = Math.min(viewportWidth / baseWidth, 1)
+      setScale(newScale)
+    }
+    
+    updateScale()
+    window.addEventListener('resize', updateScale)
+    return () => window.removeEventListener('resize', updateScale)
+  }, [])
   
   return (
     <section 
-      className="w-full relative"
+      className="w-full relative overflow-hidden"
       style={{
-        width: '1905px',
-        height: '5084px',
+        height: `${5084 * scale}px`,
         background: '#2C4D74',
       }}
     >
+      {/* Responsive wrapper container - scales all content proportionally */}
+      <div
+        style={{
+          width: `${baseWidth}px`,
+          height: '5084px', // Base height: footer image ends at 4124px + 960px = 5084px
+          position: 'absolute',
+          top: 0,
+          left: '50%',
+          transform: `translateX(-50%) scale(${scale})`,
+          transformOrigin: 'top center',
+        }}
+      >
       <div className="relative z-10 h-full">
         {/* <NavbarMenu /> */}
       </div>
@@ -520,7 +547,7 @@ export default function WhitePaper() {
         style={{
           left: '0px',
           top: '4124px', // Y 4124 relative to page, WhitePaper section starts at Y 0, so 4124 - 0 = 4124px
-          width: '1905px',
+          width: '1920px',
           height: '960px',
           aspectRatio: '3/2',
           backgroundImage: "url('/assets/White/White.png')",
@@ -530,6 +557,8 @@ export default function WhitePaper() {
           zIndex: 1, // Lower z-index so content section appears above
         }}
       />
+      </div>
+      {/* End of responsive wrapper */}
     </section>
   )
 }
