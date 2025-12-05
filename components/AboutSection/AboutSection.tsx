@@ -1,12 +1,45 @@
+'use client'
+
+import { useState, useEffect } from 'react'
+
 export default function AboutSection() {
+  const [scale, setScale] = useState(1)
+  const baseWidth = 1920 // Base design width in pixels
+  
+  useEffect(() => {
+    const updateScale = () => {
+      const viewportWidth = window.innerWidth
+      // Scale based on viewport width, maintaining aspect ratio
+      const newScale = Math.min(viewportWidth / baseWidth, 1)
+      setScale(newScale)
+    }
+    
+    updateScale()
+    window.addEventListener('resize', updateScale)
+    return () => window.removeEventListener('resize', updateScale)
+  }, [])
+  
   return (
     <section 
       id="about"
       className="w-full aspect-video bg-cover bg-center bg-no-repeat bg-gray-300 relative"
       style={{
         backgroundImage: "url('/assets/About/About.png')",
+        overflow: 'visible', // Allow Feature Summary header to overlap
       }}
     >
+      {/* Responsive wrapper container - scales all content proportionally */}
+      <div
+        style={{
+          width: `${baseWidth}px`,
+          height: '1080px', // Base height for 16:9 aspect ratio (1920x1080)
+          position: 'absolute',
+          top: 0,
+          left: '50%',
+          transform: `translateX(-50%) scale(${scale})`,
+          transformOrigin: 'top center',
+        }}
+      >
       <div
         className="absolute hidden md:block"
         style={{
@@ -144,6 +177,8 @@ export default function AboutSection() {
           </button>
         </div>
       </div>
+      </div>
+      {/* End of responsive wrapper */}
     </section>
   )
 }

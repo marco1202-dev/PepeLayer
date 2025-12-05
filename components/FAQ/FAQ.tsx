@@ -1,9 +1,11 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 
 export default function FAQ() {
   const [openAnswers, setOpenAnswers] = useState<boolean[]>([false, false, false, false])
+  const [scale, setScale] = useState(1)
+  const baseWidth = 1920 // Base design width in pixels
 
   const toggleAnswer = (index: number) => {
     setOpenAnswers(prev => {
@@ -13,13 +15,24 @@ export default function FAQ() {
     })
   }
 
+  useEffect(() => {
+    const updateScale = () => {
+      const viewportWidth = window.innerWidth
+      // Scale based on viewport width, maintaining aspect ratio
+      const newScale = Math.min(viewportWidth / baseWidth, 1)
+      setScale(newScale)
+    }
+    
+    updateScale()
+    window.addEventListener('resize', updateScale)
+    return () => window.removeEventListener('resize', updateScale)
+  }, [])
+
   return (
     <section 
       id="faq"
-      className="w-full bg-cover bg-center bg-no-repeat bg-gray-300 relative"
+      className="w-full bg-cover bg-center bg-no-repeat bg-gray-300 relative overflow-visible"
       style={{
-        width: '1905px',
-        height: '1080px',
         aspectRatio: '16/9',
         backgroundImage: "url('/assets/FAQ/FAQ.png')",
         backgroundPosition: '50%',
@@ -27,6 +40,18 @@ export default function FAQ() {
         backgroundRepeat: 'no-repeat',
       }}
     >
+      {/* Responsive wrapper container - scales all content proportionally */}
+      <div
+        style={{
+          width: `${baseWidth}px`,
+          height: '1080px', // Base height for 16:9 aspect ratio (1920x1080)
+          position: 'absolute',
+          top: 0,
+          left: '50%',
+          transform: `translateX(-50%) scale(${scale})`,
+          transformOrigin: 'top center',
+        }}
+      >
       {/* Content section - spans across HowToBuy and FAQ sections */}
       <div
         className="absolute hidden md:block"
@@ -688,6 +713,8 @@ export default function FAQ() {
           backgroundRepeat: 'no-repeat',
         }}
       />
+      </div>
+      {/* End of responsive wrapper */}
     </section>
   )
 }

@@ -1,22 +1,49 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import NavbarMenu from '@/components/Navbar'
 
 export default function HeroSection() {
   const imagePath = '/assets/Hero/HeroBackground.png'
   const [isTranslatorOpen, setIsTranslatorOpen] = useState(false)
+  const [scale, setScale] = useState(1)
+  const baseWidth = 1920 // Base design width in pixels
+  
+  useEffect(() => {
+    const updateScale = () => {
+      const viewportWidth = window.innerWidth
+      // Scale based on viewport width, maintaining aspect ratio
+      const newScale = Math.min(viewportWidth / baseWidth, 1)
+      setScale(newScale)
+    }
+    
+    updateScale()
+    window.addEventListener('resize', updateScale)
+    return () => window.removeEventListener('resize', updateScale)
+  }, [])
   
   return (
     <section 
       id="home"
-      className="w-full bg-cover bg-center bg-no-repeat bg-gray-300 aspect-[152/215] md:aspect-video relative"
+      className="w-full bg-cover bg-center bg-no-repeat bg-gray-300 aspect-[152/215] md:aspect-video relative overflow-hidden"
       style={{
         backgroundImage: `url("${imagePath}")`,
       }}
     >
-      <div className="relative z-10 h-full">
-        <NavbarMenu />
+      {/* Responsive wrapper container - scales all content proportionally */}
+      <div
+        style={{
+          width: `${baseWidth}px`,
+          height: '1080px', // Base height for 16:9 aspect ratio (1920x1080)
+          position: 'absolute',
+          top: 0,
+          left: '50%',
+          transform: `translateX(-50%) scale(${scale})`,
+          transformOrigin: 'top center',
+        }}
+      >
+        <div className="relative z-10 h-full">
+          <NavbarMenu />
         
         {/* En.svg image - Clickable button */}
         <button
@@ -1107,6 +1134,8 @@ export default function HeroSection() {
           </div>
         </div>
       </div>
+      </div>
+      {/* End of responsive wrapper */}
     </section>
   )
 }

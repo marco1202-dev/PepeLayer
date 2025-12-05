@@ -1,8 +1,31 @@
+'use client'
+
+import { useState, useEffect } from 'react'
+
 export default function HeroBar() {
+  const [scale, setScale] = useState(1)
+  const baseWidth = 1920 // Base design width in pixels
+  const baseHeight = 140 // Base height for desktop
+
+  useEffect(() => {
+    const updateScale = () => {
+      const viewportWidth = window.innerWidth
+      // Scale based on viewport width, maintaining aspect ratio
+      const newScale = Math.min(viewportWidth / baseWidth, 1)
+      setScale(newScale)
+    }
+    
+    updateScale()
+    window.addEventListener('resize', updateScale)
+    return () => window.removeEventListener('resize', updateScale)
+  }, [])
+
   return (
     <section 
-      className="w-full h-[47.412px] md:h-[140px] border-[4px] overflow-hidden flex items-center justify-center"
+      className="w-full overflow-hidden flex items-center justify-center"
       style={{
+        height: `${baseHeight * scale}px`,
+        border: `${4 * scale}px solid #695455`,
         borderColor: '#695455',
         backgroundColor: '#928D86',
       }}
@@ -11,7 +34,7 @@ export default function HeroBar() {
         className="hero-bar-scroll"
         style={{
           width: 'fit-content',
-          height: '82px',
+          height: `${82 * scale}px`,
           flexShrink: 0,
           whiteSpace: 'nowrap',
         }}
@@ -19,8 +42,8 @@ export default function HeroBar() {
         <div
           className="inline-flex items-center"
           style={{
-            padding: '4px 31.861px 0 0',
-            gap: '3.398px',
+            padding: `${4 * scale}px ${31.861 * scale}px 0 0`,
+            gap: `${3.398 * scale}px`,
           }}
         >
           <span
@@ -28,7 +51,7 @@ export default function HeroBar() {
               color: '#FFF',
               fontFeatureSettings: "'liga' off, 'clig' off",
               fontFamily: 'var(--font-irish-grover), "Irish Grover", cursive',
-              fontSize: '64px',
+              fontSize: `${64 * scale}px`,
               fontStyle: 'normal',
               fontWeight: 400,
               lineHeight: 'normal',
@@ -38,8 +61,8 @@ export default function HeroBar() {
           </span>
           <div
             style={{
-              width: '59.74px',
-              height: '60px',
+              width: `${59.74 * scale}px`,
+              height: `${60 * scale}px`,
               backgroundImage: "url('/assets/About/Herobarlogo.png')",
               backgroundPosition: '50%',
               backgroundSize: 'cover',
@@ -51,8 +74,8 @@ export default function HeroBar() {
         <div
           className="inline-flex items-center"
           style={{
-            padding: '4px 31.861px 0 0',
-            gap: '3.398px',
+            padding: `${4 * scale}px ${31.861 * scale}px 0 0`,
+            gap: `${3.398 * scale}px`,
           }}
         >
           <span
@@ -60,7 +83,7 @@ export default function HeroBar() {
               color: '#FFF',
               fontFeatureSettings: "'liga' off, 'clig' off",
               fontFamily: 'var(--font-irish-grover), "Irish Grover", cursive',
-              fontSize: '64px',
+              fontSize: `${64 * scale}px`,
               fontStyle: 'normal',
               fontWeight: 400,
               lineHeight: 'normal',
@@ -70,8 +93,8 @@ export default function HeroBar() {
           </span>
           <div
             style={{
-              width: '59.74px',
-              height: '60px',
+              width: `${59.74 * scale}px`,
+              height: `${60 * scale}px`,
               backgroundImage: "url('/assets/About/Herobarlogo.png')",
               backgroundPosition: '50%',
               backgroundSize: 'cover',

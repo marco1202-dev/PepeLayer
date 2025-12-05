@@ -1,22 +1,58 @@
+'use client'
+
+import { useState, useEffect } from 'react'
+
 export default function Footer() {
+  const [scale, setScale] = useState(1)
+  const baseWidth = 1920 // Base design width in pixels
+
+  useEffect(() => {
+    const updateScale = () => {
+      const viewportWidth = window.innerWidth
+      // Scale based on viewport width, maintaining aspect ratio
+      const newScale = Math.min(viewportWidth / baseWidth, 1)
+      setScale(newScale)
+    }
+    
+    updateScale()
+    window.addEventListener('resize', updateScale)
+    return () => window.removeEventListener('resize', updateScale)
+  }, [])
+
   return (
     <footer
-      className="w-full hidden md:flex relative"
+      className="w-full hidden md:flex relative overflow-hidden"
       style={{
         display: 'flex',
-        width: '1905px',
-        height: '509px',
-        padding: '10px',
+        height: `${509 * scale}px`,
+        padding: `${10 * scale}px`,
         flexDirection: 'column',
         justifyContent: 'center',
         alignItems: 'center',
-        gap: '10px',
-        border: '4px solid #524340',
+        gap: `${10 * scale}px`,
+        border: `${4 * scale}px solid #524340`,
         background: '#928D86',
         boxShadow: '0 -2px 2px 0 rgba(169, 152, 138, 0.10) inset, 0 3px 3px 0 rgba(0, 0, 0, 0.30) inset',
         position: 'relative',
       }}
     >
+      {/* Responsive wrapper container - scales all content proportionally */}
+      <div
+        style={{
+          width: `${baseWidth}px`,
+          height: '509px', // Base height for the footer section
+          position: 'absolute',
+          top: 0,
+          left: '50%',
+          transform: `translateX(-50%) scale(${scale})`,
+          transformOrigin: 'top center',
+          display: 'flex',
+          flexDirection: 'column',
+          justifyContent: 'center',
+          alignItems: 'center',
+          gap: '10px',
+        }}
+      >
       {/* Footer Logo */}
       <div
         style={{
@@ -283,6 +319,8 @@ export default function Footer() {
           }}
         />
       </div>
+      </div>
+      {/* End of responsive wrapper */}
     </footer>
   )
 }

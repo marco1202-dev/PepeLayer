@@ -1,25 +1,56 @@
 'use client'
 
+import { useState, useEffect } from 'react'
 import { useRouter } from 'next/navigation'
 
 export default function FeatureSummary() {
   const router = useRouter()
+  const [scale, setScale] = useState(1)
+  const baseWidth = 1920 // Base design width in pixels
+  
+  useEffect(() => {
+    const updateScale = () => {
+      const viewportWidth = window.innerWidth
+      // Scale based on viewport width, maintaining aspect ratio
+      const newScale = Math.min(viewportWidth / baseWidth, 1)
+      setScale(newScale)
+    }
+    
+    updateScale()
+    window.addEventListener('resize', updateScale)
+    return () => window.removeEventListener('resize', updateScale)
+  }, [])
+  
   return (
     <section 
       id="highlight"
       className="w-full aspect-video md:aspect-video bg-cover bg-center bg-no-repeat bg-gray-300 relative"
       style={{
         backgroundImage: "url('/assets/Summary/Feature Summary.png')",
+        overflow: 'visible', // Allow header to extend above section
       }}
     >
+      {/* Responsive wrapper container - scales all content proportionally */}
+      <div
+        style={{
+          width: `${baseWidth}px`,
+          height: '1080px', // Base height for 16:9 aspect ratio (1920x1080)
+          position: 'absolute',
+          top: 0,
+          left: '50%',
+          transform: `translateX(-50%) scale(${scale})`,
+          transformOrigin: 'top center',
+        }}
+      >
         {/* Content section */}
         <div
           className="absolute hidden md:block"
           style={{
             left: '382px',
-            top: '-62px', // 2238 - 2300 = -62px (Y 2238 from page, FeatureSummary starts at 2300px)
+            top: '-42px', // Moved down by 20px (from -62px to -42px)
             width: '1156px',
             height: '1094px',
+            zIndex: 10, // Ensure content appears above About section
             // border: '1px solid blue',
           }}
         >
@@ -438,6 +469,8 @@ export default function FeatureSummary() {
             </button>
           </div>
         </div>
+      </div>
+      {/* End of responsive wrapper */}
     </section>
   )
 }
