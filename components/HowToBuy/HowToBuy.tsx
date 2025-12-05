@@ -22,9 +22,8 @@ export default function HowToBuy() {
   return (
     <section 
       id="how-to-buy"
-      className="w-full bg-cover bg-center bg-no-repeat bg-gray-300 relative overflow-hidden"
+      className="w-full aspect-[152/215] md:aspect-video bg-cover bg-center bg-no-repeat bg-gray-300 relative overflow-hidden"
       style={{
-        aspectRatio: '965/543',
         backgroundImage: "url('/assets/HowTo/HowToBuy.png')",
         backgroundPosition: '50%',
         backgroundSize: 'cover',
@@ -332,6 +331,285 @@ export default function HowToBuy() {
       </div>
       </div>
       {/* End of responsive wrapper */}
+      
+      {/* Mobile HowToBuy Content */}
+      <div
+        className="md:hidden absolute left-1/2 -translate-x-1/2"
+        style={{
+          top: 'clamp(20px, 5vw, 40px)',
+          width: '92vw',
+          maxWidth: '566px',
+          position: 'relative',
+          zIndex: 5,
+          paddingBottom: 'clamp(40px, 10vw, 60px)',
+        }}
+      >
+        {/* Mobile Header title */}
+        <h2
+          style={{
+            width: '100%',
+            color: '#FFF',
+            fontFeatureSettings: "'liga' off, 'clig' off",
+            fontFamily: 'var(--font-irish-grover), "Irish Grover", cursive',
+            fontSize: 'clamp(40px, 13.3vw, 128px)',
+            fontStyle: 'normal',
+            fontWeight: 400,
+            lineHeight: 'normal',
+            margin: 0,
+            marginBottom: 'clamp(20px, 5.2vw, 30px)',
+            textAlign: 'center',
+          }}
+        >
+          How To Buy
+        </h2>
+        
+        {/* Mobile Menu section */}
+        <div
+          className="flex flex-col"
+          style={{
+            width: '100%',
+            padding: 'clamp(20px, 6.5vw, 42px) clamp(12px, 3.9vw, 24px)',
+            gap: 'clamp(6px, 2vw, 12px)',
+            alignItems: 'flex-start',
+            borderRadius: 'clamp(4px, 1.3vw, 8px)',
+            border: 'clamp(4px, 1.3vw, 8px) solid #695455',
+            background: '#524340',
+          }}
+        >
+          {/* Mobile Menu item 1 */}
+          <div
+            className="flex flex-col justify-center items-center flex-shrink-0"
+            style={{
+              width: '100%',
+              // minHeight: 'clamp(100px, 32.5vw, 162px)',
+              // padding: 'clamp(6px, 1.9vw, 10px)',
+              gap: 'clamp(6px, 1.9vw, 10px)',
+              // border: 'clamp(3px, 1vw, 5px) solid #695455',
+              background: '#524340',
+            }}
+          >
+            <h3
+              style={{
+                color: '#928D86',
+                fontFeatureSettings: "'liga' off, 'clig' off",
+                fontFamily: 'var(--font-irish-grover), "Irish Grover", cursive',
+                fontSize: 'clamp(16px, 5.2vw, 32px)',
+                fontStyle: 'normal',
+                fontWeight: 400,
+                lineHeight: 'normal',
+                margin: 0,
+                textAlign: 'center',
+              }}
+            >
+              1. Create a Wallet
+            </h3>
+            
+            <button
+              className="flex justify-center items-center"
+              style={{
+                width: 'clamp(200px, 70vw, 435px)',
+                padding: 'clamp(6px, 1.9vw, 10px)',
+                gap: 'clamp(6px, 1.9vw, 10px)',
+                borderRadius: 'clamp(4px, 1.3vw, 8px)',
+                border: 'clamp(2px, 0.8vw, 4px) solid #695455',
+                background: '#928D86',
+                boxShadow: '0 -2px 2px 0 rgba(169, 152, 138, 0.10) inset, 0 3px 3px 0 rgba(0, 0, 0, 0.30) inset, 0 4px 20px 0 rgba(0, 0, 0, 0.60)',
+                cursor: 'pointer',
+              }}
+              type="button"
+            >
+              <span
+                style={{
+                  color: '#524340',
+                  textAlign: 'center',
+                  fontFamily: 'var(--font-irish-grover), "Irish Grover", cursive',
+                  fontSize: 'clamp(10px, 3.1vw, 20px)',
+                  fontStyle: 'normal',
+                  fontWeight: 400,
+                  lineHeight: 'normal',
+                }}
+              >
+                Download MetaMask or Trust Wallet your portal to the Empire.
+              </span>
+            </button>
+          </div>
+          
+          {/* Mobile Menu item 2 */}
+          <div
+            className="flex flex-col justify-center items-center flex-shrink-0"
+            style={{
+              width: '100%',
+              marginTop: '10px',
+              // minHeight: 'clamp(100px, 32.5vw, 162px)',
+              // padding: 'clamp(6px, 1.9vw, 10px)',
+              gap: 'clamp(6px, 1.9vw, 10px)',
+              // border: 'clamp(3px, 1vw, 5px) solid #695455',
+              background: '#524340',
+            }}
+          >
+            <h3
+              style={{
+                color: '#928D86',
+                fontFeatureSettings: "'liga' off, 'clig' off",
+                fontFamily: 'var(--font-irish-grover), "Irish Grover", cursive',
+                fontSize: 'clamp(16px, 5.2vw, 32px)',
+                fontStyle: 'normal',
+                fontWeight: 400,
+                lineHeight: 'normal',
+                margin: 0,
+                textAlign: 'center',
+              }}
+            >
+              2. Fund Your Wallet
+            </h3>
+            
+            <button
+              className="flex justify-center items-center"
+              style={{
+                width: 'clamp(200px, 70vw, 431px)',
+                padding: 'clamp(6px, 1.9vw, 10px)',
+                gap: 'clamp(6px, 1.9vw, 10px)',
+                borderRadius: 'clamp(4px, 1.3vw, 8px)',
+                border: 'clamp(2px, 0.8vw, 4px) solid #695455',
+                background: '#928D86',
+                boxShadow: '0 -2px 2px 0 rgba(169, 152, 138, 0.10) inset, 0 3px 3px 0 rgba(0, 0, 0, 0.30) inset, 0 4px 20px 0 rgba(0, 0, 0, 0.60)',
+                cursor: 'pointer',
+              }}
+              type="button"
+            >
+              <span
+                style={{
+                  color: '#524340',
+                  textAlign: 'center',
+                  fontFamily: 'var(--font-irish-grover), "Irish Grover", cursive',
+                  fontSize: 'clamp(10px, 3.1vw, 20px)',
+                  fontStyle: 'normal',
+                  fontWeight: 400,
+                  lineHeight: 'normal',
+                }}
+              >
+                Deposit ETH or USDT; ensure enough for gas fees.
+              </span>
+            </button>
+          </div>
+          
+          {/* Mobile Menu item 3 */}
+          <div
+            className="flex flex-col justify-center items-center flex-shrink-0"
+            style={{
+              width: '100%',
+              // minHeight: 'clamp(100px, 32.5vw, 162px)',
+              padding: 'clamp(6px, 1.9vw, 10px)',
+              gap: 'clamp(6px, 1.9vw, 10px)',
+              // border: 'clamp(3px, 1vw, 5px) solid #695455',
+              background: '#524340',
+            }}
+          >
+            <h3
+              style={{
+                color: '#928D86',
+                fontFeatureSettings: "'liga' off, 'clig' off",
+                fontFamily: 'var(--font-irish-grover), "Irish Grover", cursive',
+                fontSize: 'clamp(16px, 5.2vw, 32px)',
+                fontStyle: 'normal',
+                fontWeight: 400,
+                lineHeight: 'normal',
+                margin: 0,
+                textAlign: 'center',
+              }}
+            >
+              3. Join the Presale
+            </h3>
+            
+            <button
+              className="flex justify-center items-center"
+              style={{
+                width: 'clamp(200px, 70vw, 475px)',
+                padding: 'clamp(6px, 1.9vw, 10px)',
+                gap: 'clamp(6px, 1.9vw, 10px)',
+                borderRadius: 'clamp(4px, 1.3vw, 8px)',
+                border: 'clamp(2px, 0.8vw, 4px) solid #695455',
+                background: '#928D86',
+                boxShadow: '0 -2px 2px 0 rgba(169, 152, 138, 0.10) inset, 0 3px 3px 0 rgba(0, 0, 0, 0.30) inset, 0 4px 20px 0 rgba(0, 0, 0, 0.60)',
+                cursor: 'pointer',
+              }}
+              type="button"
+            >
+              <span
+                style={{
+                  color: '#524340',
+                  textAlign: 'center',
+                  fontFamily: 'var(--font-irish-grover), "Irish Grover", cursive',
+                  fontSize: 'clamp(10px, 3.1vw, 20px)',
+                  fontStyle: 'normal',
+                  fontWeight: 400,
+                  lineHeight: 'normal',
+                }}
+              >
+                Visit pepelayer.com, connect your wallet, and purchase $PLR
+              </span>
+            </button>
+          </div>
+          
+          {/* Mobile Menu item 4 */}
+          <div
+            className="flex flex-col justify-center items-center flex-shrink-0"
+            style={{
+              width: '100%',
+              // minHeight: 'clamp(100px, 32.5vw, 162px)',
+              padding: 'clamp(6px, 1.9vw, 10px)',
+              gap: 'clamp(6px, 1.9vw, 10px)',
+              // border: 'clamp(3px, 1vw, 5px) solid #695455',
+              background: '#524340',
+            }}
+          >
+            <h3
+              style={{
+                color: '#928D86',
+                fontFeatureSettings: "'liga' off, 'clig' off",
+                fontFamily: 'var(--font-irish-grover), "Irish Grover", cursive',
+                fontSize: 'clamp(16px, 5.2vw, 32px)',
+                fontStyle: 'normal',
+                fontWeight: 400,
+                lineHeight: 'normal',
+                margin: 0,
+                textAlign: 'center',
+              }}
+            >
+              4. Claim After Presale
+            </h3>
+            
+            <button
+              className="flex justify-center items-center"
+              style={{
+                width: 'clamp(200px, 70vw, 396px)',
+                padding: 'clamp(6px, 1.9vw, 10px)',
+                gap: 'clamp(6px, 1.9vw, 10px)',
+                borderRadius: 'clamp(4px, 1.3vw, 8px)',
+                border: 'clamp(2px, 0.8vw, 4px) solid #695455',
+                background: '#928D86',
+                boxShadow: '0 -2px 2px 0 rgba(169, 152, 138, 0.10) inset, 0 3px 3px 0 rgba(0, 0, 0, 0.30) inset, 0 4px 20px 0 rgba(0, 0, 0, 0.60)',
+                cursor: 'pointer',
+              }}
+              type="button"
+            >
+              <span
+                style={{
+                  color: '#524340',
+                  textAlign: 'center',
+                  fontFamily: 'var(--font-irish-grover), "Irish Grover", cursive',
+                  fontSize: 'clamp(10px, 3.1vw, 20px)',
+                  fontStyle: 'normal',
+                  fontWeight: 400,
+                  lineHeight: 'normal',
+                }}
+              >
+                Return to claim your tokens — and join the Swamp Revolution.
+              </span>
+            </button>
+          </div>
+        </div>
+      </div>
     </section>
   )
 }

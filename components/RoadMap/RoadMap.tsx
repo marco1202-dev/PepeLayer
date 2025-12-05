@@ -22,9 +22,8 @@ export default function RoadMap() {
   return (
     <section 
       id="roadmap"
-      className="w-full bg-cover bg-center bg-no-repeat bg-gray-300 relative overflow-hidden"
+      className="w-full aspect-[152/215] md:aspect-video bg-cover bg-center bg-no-repeat bg-gray-300 relative overflow-hidden"
       style={{
-        aspectRatio: '1925/1083',
         backgroundImage: "url('/assets/Roadmap/RoadMap.png')",
       }}
     >
@@ -657,6 +656,657 @@ export default function RoadMap() {
         </div>
       </div>
       {/* End of responsive wrapper */}
+      
+      {/* Mobile RoadMap Content */}
+      <div
+        className="md:hidden absolute left-1/2 -translate-x-1/2"
+        style={{
+          top: 'clamp(10px, 5vw, 40px)',
+          width: '92vw',
+          maxWidth: '540px',
+          position: 'relative',
+          zIndex: 5,
+          paddingBottom: 'clamp(60px, 10vw, 60px)',
+        }}
+      >
+        {/* Mobile Header title */}
+        <h2
+          style={{
+            width: '100%',
+            color: '#424242',
+            fontFeatureSettings: "'liga' off, 'clig' off",
+            textShadow: '3px 3px 20px #928D86',
+            WebkitTextStrokeWidth: 'clamp(0.5px, 0.26vw, 1px)',
+            WebkitTextStrokeColor: '#928D86',
+            fontFamily: 'var(--font-irish-grover), "Irish Grover", cursive',
+            fontSize: 'clamp(40px, 13.3vw, 128px)',
+            fontStyle: 'normal',
+            fontWeight: 400,
+            lineHeight: 'normal',
+            margin: 0,
+            marginBottom: 'clamp(20px, 5.2vw, 30px)',
+            textAlign: 'center',
+          }}
+        >
+          ROADMAP
+        </h2>
+        
+        {/* Mobile Phase Container - Grid Layout */}
+        <div
+          className="flex flex-col"
+          style={{
+            width: '100%',
+            gap: 'clamp(4px, 1.5vw, 8px)',
+            position: 'relative',
+          }}
+        >
+          {/* Top Row: Phase I and Phase II side by side */}
+          <div
+            className="flex justify-center items-start"
+            style={{
+              width: '100%',
+              gap: 'clamp(6px, 1.5vw, 10px)',
+            }}
+          >
+            {/* Mobile Phase I */}
+            <div
+              className="flex flex-col"
+              style={{
+                width: 'clamp(140px, 44vw, 173px)',
+                minHeight: 'clamp(80px, 25vw, 120px)',
+                padding: 'clamp(6px, 2vw, 10px)',
+                gap: 'clamp(4px, 1.5vw, 8px)',
+                borderRadius: '4px',
+                border: 'clamp(1px, 0.52vw, 2px) solid #56534F',
+                background: '#4C4C4C',
+                boxShadow: '3px 3px 4px 0 rgba(0, 0, 0, 0.25), 3px 1px 25px 0 rgba(0, 0, 0, 0.25) inset',
+              }}
+            >
+              <h3
+                style={{
+                  color: '#FFF',
+                  fontFeatureSettings: "'liga' off, 'clig' off",
+                  fontFamily: 'var(--font-irish-grover), "Irish Grover", cursive',
+                  fontSize: 'clamp(10px, 3.5vw, 10px)',
+                  fontStyle: 'normal',
+                  fontWeight: 400,
+                  lineHeight: 'normal',
+                  margin: 0,
+                  textAlign: 'left',
+                }}
+              >
+                Phase I — The Call of the Swamp
+              </h3>
+              <ul
+                style={{
+                  alignSelf: 'stretch',
+                  display: 'flex',
+                  flexDirection: 'column',
+                  gap: 'clamp(2px, 1vw, 2px)',
+                  margin: 0,
+                  padding: 0,
+                  listStyle: 'none',
+                  marginTop: 'clamp(10px, 1vw, 10px)',
+                }}
+              >
+                <li
+                  style={{
+                    color: '#FFF',
+                    fontFeatureSettings: "'liga' off, 'clig' off",
+                    fontFamily: 'var(--font-irish-grover), "Irish Grover", cursive',
+                    fontSize: 'clamp(6px, 2.2vw, 6px)',
+                    fontStyle: 'normal',
+                    fontWeight: 400,
+                    lineHeight: 'normal',
+                    margin: 0,
+                  }}
+                >
+                  • Community expansion across global platforms
+                </li>
+                <li
+                  style={{
+                    color: '#FFF',
+                    fontFeatureSettings: "'liga' off, 'clig' off",
+                    fontFamily: 'var(--font-irish-grover), "Irish Grover", cursive',
+                    fontSize: 'clamp(6px, 2.2vw, 6px)',
+                    fontStyle: 'normal',
+                    fontWeight: 400,
+                    lineHeight: 'normal',
+                    margin: 0,
+                  }}
+                >
+                  • Meme-driven campaigns spreading the imperial call
+                </li>
+                <li
+                  style={{
+                    color: '#FFF',
+                    fontFeatureSettings: "'liga' off, 'clig' off",
+                    fontFamily: 'var(--font-irish-grover), "Irish Grover", cursive',
+                    fontSize: 'clamp(6px, 2.2vw, 6px)',
+                    fontStyle: 'normal',
+                    fontWeight: 400,
+                    lineHeight: 'normal',
+                    margin: 0,
+                  }}
+                >
+                  • Recruitment of early marsh leaders & ambassadors
+                </li>
+                <li
+                  style={{
+                    color: '#FFF',
+                    fontFeatureSettings: "'liga' off, 'clig' off",
+                    fontFamily: 'var(--font-irish-grover), "Irish Grover", cursive',
+                    fontSize: 'clamp(6px, 2.2vw, 6px)',
+                    fontStyle: 'normal',
+                    fontWeight: 400,
+                    lineHeight: 'normal',
+                    margin: 0,
+                  }}
+                >
+                  • Launch of the initial presale round
+                </li>
+             
+              <li
+                style={{
+                  color: '#FFF',
+                  fontFeatureSettings: "'liga' off, 'clig' off",
+                  fontFamily: 'var(--font-irish-grover), "Irish Grover", cursive',
+                  fontSize: 'clamp(6px, 2.2vw, 6px)',
+                  fontStyle: 'italic',
+                  fontWeight: 400,
+                  lineHeight: 'normal',
+                  margin: 0,
+                  // marginTop: 'clamp(4px, 1.3vw, 8px)',
+                }}
+              >
+                "From whispers in the mud, a movement takes form."
+              </li>
+              </ul>
+            </div>
+            
+            {/* Mobile Phase II */}
+            <div
+              className="flex flex-col"
+              style={{
+                width: 'clamp(220px, 30.3vw, 220px)',
+                // width: '182px',
+                minHeight: 'clamp(97px, 25vw, 97px)',
+                padding: 'clamp(6px, 2vw, 10px)',
+                gap: 'clamp(4px, 1.5vw, 8px)',
+                borderRadius: '4px',
+                border: 'clamp(1px, 0.52vw, 2px) solid #56534F',
+                background: '#4C4C4C',
+                boxShadow: '3px 3px 4px 0 rgba(0, 0, 0, 0.25), 3px 1px 25px 0 rgba(0, 0, 0, 0.25) inset',
+              }}
+            >
+              <h2
+                style={{
+                  color: '#FFF',
+                  fontFeatureSettings: "'liga' off, 'clig' off",
+                  fontFamily: 'var(--font-irish-grover), "Irish Grover", cursive',
+                  fontSize: 'clamp(10px, 1.5vw, 10px)',
+                  fontStyle: 'normal',
+                  fontWeight: 400,
+                  lineHeight: 'normal',
+                  margin: 0,
+                  textAlign: 'left',
+                }}
+              >
+                Phase II — The Forging of the Foundation
+              </h2>
+              <ul
+                style={{
+                  alignSelf: 'stretch',
+                  display: 'flex',
+                  flexDirection: 'column',
+                  gap: 'clamp(2px, 1vw, 4px)',
+                  margin: 0,
+                  padding: 0,
+                  listStyle: 'none',
+                  marginTop: '25px'
+                }}
+              >
+                <li
+                  style={{
+                    color: '#FFF',
+                    fontFeatureSettings: "'liga' off, 'clig' off",
+                    fontFamily: 'var(--font-irish-grover), "Irish Grover", cursive',
+                    fontSize: 'clamp(6px, 2.2vw, 6px)',
+                    fontStyle: 'normal',
+                    fontWeight: 400,
+                    lineHeight: 'normal',
+                    margin: 0,
+                  }}
+                >
+                  • Finalize smart contracts & Layer 2 protocol core
+                </li>
+                <li
+                  style={{
+                    color: '#FFF',
+                    fontFeatureSettings: "'liga' off, 'clig' off",
+                    fontFamily: 'var(--font-irish-grover), "Irish Grover", cursive',
+                    fontSize: 'clamp(6px, 2.2vw, 6px)',
+                    fontStyle: 'normal',
+                    fontWeight: 400,
+                    lineHeight: 'normal',
+                    margin: 0,
+                  }}
+                >
+                  • Conduct security audits and performance testing
+                </li>
+                <li
+                  style={{
+                    color: '#FFF',
+                    fontFeatureSettings: "'liga' off, 'clig' off",
+                    fontFamily: 'var(--font-irish-grover), "Irish Grover", cursive',
+                    fontSize: 'clamp(6px, 2.2vw, 6px)',
+                    fontStyle: 'normal',
+                    fontWeight: 400,
+                    lineHeight: 'normal',
+                    margin: 0,
+                  }}
+                >
+                  • Release staking and reward framework
+                </li>
+                <li
+                  style={{
+                    color: '#FFF',
+                    fontFeatureSettings: "'liga' off, 'clig' off",
+                    fontFamily: 'var(--font-irish-grover), "Irish Grover", cursive',
+                    fontSize: 'clamp(6px, 2.2vw, 6px)',
+                    fontStyle: 'normal',
+                    fontWeight: 400,
+                    lineHeight: 'normal',
+                    margin: 0,
+                  }}
+                >
+                  • Establish alliances with partner builders and early ecosystems
+                </li>
+              
+              <li
+                style={{
+                  color: '#FFF',
+                  fontFeatureSettings: "'liga' off, 'clig' off",
+                  fontFamily: 'var(--font-irish-grover), "Irish Grover", cursive',
+                  fontSize: 'clamp(6px, 2.2vw, 6px)',
+                  fontStyle: 'italic',
+                  fontWeight: 400,
+                  lineHeight: 'normal',
+                  margin: 0,
+                  // marginTop: 'clamp(4px, 1.3vw, 8px)',
+                }}
+              >
+                "Where code and culture merge, the foundation of empire is born."
+              </li>
+              </ul>
+            </div>
+          </div>
+          
+          {/* Middle Row: Phase III and Phase IV side by side */}
+          <div
+            className="flex justify-center items-start"
+            style={{
+              width: '100%',
+              gap: 'clamp(6px, 1.5vw, 10px)',
+            }}
+          >
+            {/* Mobile Phase III */}
+            <div
+              className="flex flex-col"
+              style={{
+                width: 'clamp(220px, 30.3vw, 220px)',
+                minHeight: 'clamp(97px, 25vw, 97px)',
+                padding: 'clamp(6px, 2vw, 10px)',
+                gap: 'clamp(4px, 1.5vw, 8px)',
+                borderRadius: '4px',
+                border: 'clamp(1px, 0.52vw, 2px) solid #56534F',
+                background: '#4C4C4C',
+                boxShadow: '3px 3px 4px 0 rgba(0, 0, 0, 0.25), 3px 1px 25px 0 rgba(0, 0, 0, 0.25) inset',
+              }}
+            >
+              <h2
+                style={{
+                  color: '#FFF',
+                  fontFeatureSettings: "'liga' off, 'clig' off",
+                  fontFamily: 'var(--font-irish-grover), "Irish Grover", cursive',
+                  fontSize: 'clamp(10px, 1.5vw, 10px)',
+                  fontStyle: 'normal',
+                  fontWeight: 400,
+                  lineHeight: 'normal',
+                  margin: 0,
+                  textAlign: 'left',
+                }}
+              >
+                Phase III — The Leap of Dominion
+              </h2>
+              <ul
+                style={{
+                  alignSelf: 'stretch',
+                  display: 'flex',
+                  flexDirection: 'column',
+                  gap: 'clamp(2px, 1vw, 4px)',
+                  margin: 0,
+                  padding: 0,
+                  listStyle: 'none',
+                  marginTop: '25px',
+                }}
+              >
+                <li
+                  style={{
+                    color: '#FFF',
+                    fontFeatureSettings: "'liga' off, 'clig' off",
+                    fontFamily: 'var(--font-irish-grover), "Irish Grover", cursive',
+                    fontSize: 'clamp(6px, 2.2vw, 6px)',
+                    fontStyle: 'normal',
+                    fontWeight: 400,
+                    lineHeight: 'normal',
+                    margin: 0,
+                  }}
+                >
+                  • Completion of final presale and token distribution
+                </li>
+                <li
+                  style={{
+                    color: '#FFF',
+                    fontFeatureSettings: "'liga' off, 'clig' off",
+                    fontFamily: 'var(--font-irish-grover), "Irish Grover", cursive',
+                    fontSize: 'clamp(6px, 2.2vw, 6px)',
+                    fontStyle: 'normal',
+                    fontWeight: 400,
+                    lineHeight: 'normal',
+                    margin: 0,
+                  }}
+                >
+                  • Deployment of liquidity and launch on major DEXs
+                </li>
+                <li
+                  style={{
+                    color: '#FFF',
+                    fontFeatureSettings: "'liga' off, 'clig' off",
+                    fontFamily: 'var(--font-irish-grover), "Irish Grover", cursive',
+                    fontSize: 'clamp(6px, 2.2vw, 6px)',
+                    fontStyle: 'normal',
+                    fontWeight: 400,
+                    lineHeight: 'normal',
+                    margin: 0,
+                  }}
+                >
+                  • Community surpasses 50,000 members worldwide
+                </li>
+                <li
+                  style={{
+                    color: '#FFF',
+                    fontFeatureSettings: "'liga' off, 'clig' off",
+                    fontFamily: 'var(--font-irish-grover), "Irish Grover", cursive',
+                    fontSize: 'clamp(6px, 2.2vw, 6px)',
+                    fontStyle: 'normal',
+                    fontWeight: 400,
+                    lineHeight: 'normal',
+                    margin: 0,
+                  }}
+                >
+                  • First wave of marketing offensives across crypto realms
+                </li>
+              
+              <li
+                style={{
+                  color: '#FFF',
+                  fontFeatureSettings: "'liga' off, 'clig' off",
+                  fontFamily: 'var(--font-irish-grover), "Irish Grover", cursive',
+                  fontSize: 'clamp(6px, 2.2vw, 6px)',
+                  fontStyle: 'italic',
+                  fontWeight: 400,
+                  lineHeight: 'normal',
+                  margin: 0,
+                }}
+              >
+                "The leap is made — and history begins to record the name PEPELayer."
+              </li>
+              </ul>
+            </div>
+            
+            {/* Mobile Phase IV */}
+            <div
+              className="flex flex-col"
+              style={{
+                width: 'clamp(220px, 30.3vw, 220px)',
+                minHeight: 'clamp(97px, 25vw, 97px)',
+                padding: 'clamp(6px, 2vw, 10px)',
+                gap: 'clamp(4px, 1.5vw, 8px)',
+                borderRadius: '4px',
+                border: 'clamp(1px, 0.52vw, 2px) solid #56534F',
+                background: '#4C4C4C',
+                boxShadow: '3px 3px 4px 0 rgba(0, 0, 0, 0.25), 3px 1px 25px 0 rgba(0, 0, 0, 0.25) inset',
+              }}
+            >
+              <h2
+                style={{
+                  color: '#FFF',
+                  fontFeatureSettings: "'liga' off, 'clig' off",
+                  fontFamily: 'var(--font-irish-grover), "Irish Grover", cursive',
+                  fontSize: 'clamp(10px, 1.5vw, 10px)',
+                  fontStyle: 'normal',
+                  fontWeight: 400,
+                  lineHeight: 'normal',
+                  margin: 0,
+                  textAlign: 'left',
+                }}
+              >
+                Phase IV — The Bridges of Expansion
+              </h2>
+              <ul
+                style={{
+                  alignSelf: 'stretch',
+                  display: 'flex',
+                  flexDirection: 'column',
+                  gap: 'clamp(2px, 1vw, 4px)',
+                  margin: 0,
+                  padding: 0,
+                  listStyle: 'none',
+                  marginTop: '25px',
+                }}
+              >
+                <li
+                  style={{
+                    color: '#FFF',
+                    fontFeatureSettings: "'liga' off, 'clig' off",
+                    fontFamily: 'var(--font-irish-grover), "Irish Grover", cursive',
+                    fontSize: 'clamp(6px, 2.2vw, 6px)',
+                    fontStyle: 'normal',
+                    fontWeight: 400,
+                    lineHeight: 'normal',
+                    margin: 0,
+                  }}
+                >
+                  • Launch of cross-chain integrations and bridge protocols
+                </li>
+                <li
+                  style={{
+                    color: '#FFF',
+                    fontFeatureSettings: "'liga' off, 'clig' off",
+                    fontFamily: 'var(--font-irish-grover), "Irish Grover", cursive',
+                    fontSize: 'clamp(6px, 2.2vw, 6px)',
+                    fontStyle: 'normal',
+                    fontWeight: 400,
+                    lineHeight: 'normal',
+                    margin: 0,
+                  }}
+                >
+                  • Developer grants and NFT initiatives to fuel creativity
+                </li>
+                <li
+                  style={{
+                    color: '#FFF',
+                    fontFeatureSettings: "'liga' off, 'clig' off",
+                    fontFamily: 'var(--font-irish-grover), "Irish Grover", cursive',
+                    fontSize: 'clamp(6px, 2.2vw, 6px)',
+                    fontStyle: 'normal',
+                    fontWeight: 400,
+                    lineHeight: 'normal',
+                    margin: 0,
+                  }}
+                >
+                  • Strategic alliances across GameFi, DeFi, and meme ecosystems
+                </li>
+                <li
+                  style={{
+                    color: '#FFF',
+                    fontFeatureSettings: "'liga' off, 'clig' off",
+                    fontFamily: 'var(--font-irish-grover), "Irish Grover", cursive',
+                    fontSize: 'clamp(6px, 2.2vw, 6px)',
+                    fontStyle: 'normal',
+                    fontWeight: 400,
+                    lineHeight: 'normal',
+                    margin: 0,
+                  }}
+                >
+                  • On-chain DAO Council formed to guide the empire's future
+                </li>
+              
+              <li
+                style={{
+                  color: '#FFF',
+                  fontFeatureSettings: "'liga' off, 'clig' off",
+                  fontFamily: 'var(--font-irish-grover), "Irish Grover", cursive',
+                  fontSize: 'clamp(6px, 2.2vw, 6px)',
+                  fontStyle: 'italic',
+                  fontWeight: 400,
+                  lineHeight: 'normal',
+                  margin: 0,
+                }}
+              >
+                "The empire no longer grows by conquest, but by Connection."
+              </li>
+              </ul>
+            </div>
+          </div>
+          
+          {/* Bottom Row: Phase V centered */}
+          <div
+            className="flex justify-center"
+            style={{
+              width: '100%',
+              marginTop: 'clamp(4px, 1.5vw, 8px)',
+              marginBottom: 'clamp(20px, 5vw, 40px)',
+            }}
+          >
+            {/* Mobile Phase V */}
+            <div
+              className="flex flex-col"
+              style={{
+                width: 'clamp(220px, 30.3vw, 220px)',
+                minHeight: 'clamp(97px, 25vw, 97px)',
+                padding: 'clamp(6px, 2vw, 10px)',
+                gap: 'clamp(4px, 1.5vw, 8px)',
+                borderRadius: '4px',
+                border: 'clamp(1px, 0.52vw, 2px) solid #56534F',
+                background: '#4C4C4C',
+                boxShadow: '3px 3px 4px 0 rgba(0, 0, 0, 0.25), 3px 1px 25px 0 rgba(0, 0, 0, 0.25) inset',
+              }}
+            >
+              <h2
+                style={{
+                  color: '#FFF',
+                  fontFeatureSettings: "'liga' off, 'clig' off",
+                  fontFamily: 'var(--font-irish-grover), "Irish Grover", cursive',
+                  fontSize: 'clamp(10px, 1.5vw, 10px)',
+                  fontStyle: 'normal',
+                  fontWeight: 400,
+                  lineHeight: 'normal',
+                  margin: 0,
+                  textAlign: 'center',
+                }}
+              >
+                Phase V — The Eternal Layer
+              </h2>
+              <ul
+                style={{
+                  alignSelf: 'stretch',
+                  display: 'flex',
+                  flexDirection: 'column',
+                  gap: 'clamp(2px, 1vw, 4px)',
+                  margin: 0,
+                  padding: 0,
+                  listStyle: 'none',
+                  marginTop: '25px',
+                }}
+              >
+                <li
+                  style={{
+                    color: '#FFF',
+                    fontFeatureSettings: "'liga' off, 'clig' off",
+                    fontFamily: 'var(--font-irish-grover), "Irish Grover", cursive',
+                    fontSize: 'clamp(6px, 2.2vw, 6px)',
+                    fontStyle: 'normal',
+                    fontWeight: 400,
+                    lineHeight: 'normal',
+                    margin: 0,
+                  }}
+                >
+                  • Rollout of scaling upgrades & modular Layer 2 architecture
+                </li>
+                <li
+                  style={{
+                    color: '#FFF',
+                    fontFeatureSettings: "'liga' off, 'clig' off",
+                    fontFamily: 'var(--font-irish-grover), "Irish Grover", cursive',
+                    fontSize: 'clamp(6px, 2.2vw, 6px)',
+                    fontStyle: 'normal',
+                    fontWeight: 400,
+                    lineHeight: 'normal',
+                    margin: 0,
+                  }}
+                >
+                  • Fully decentralized governance through DAO sovereignty
+                </li>
+                <li
+                  style={{
+                    color: '#FFF',
+                    fontFeatureSettings: "'liga' off, 'clig' off",
+                    fontFamily: 'var(--font-irish-grover), "Irish Grover", cursive',
+                    fontSize: 'clamp(6px, 2.2vw, 6px)',
+                    fontStyle: 'normal',
+                    fontWeight: 400,
+                    lineHeight: 'normal',
+                    margin: 0,
+                  }}
+                >
+                  • Integration of advanced data layers, AI modules & oracles
+                </li>
+                <li
+                  style={{
+                    color: '#FFF',
+                    fontFeatureSettings: "'liga' off, 'clig' off",
+                    fontFamily: 'var(--font-irish-grover), "Irish Grover", cursive',
+                    fontSize: 'clamp(6px, 2.2vw, 6px)',
+                    fontStyle: 'normal',
+                    fontWeight: 400,
+                    lineHeight: 'normal',
+                    margin: 0,
+                  }}
+                >
+                  • Continuous evolution — turning PEPELayer into the living civilization of Web3
+                </li>
+              
+              <li
+                style={{
+                  color: '#FFF',
+                  fontFeatureSettings: "'liga' off, 'clig' off",
+                  fontFamily: 'var(--font-irish-grover), "Irish Grover", cursive',
+                  fontSize: 'clamp(6px, 2.2vw, 6px)',
+                  fontStyle: 'italic',
+                  fontWeight: 400,
+                  lineHeight: 'normal',
+                  margin: 0,
+                }}
+              >
+                "Not a project, not a phase — a perpetual empire written in code."
+              </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
   )
 }

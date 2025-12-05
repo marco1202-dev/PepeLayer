@@ -22,14 +22,151 @@ export default function AboutSection() {
   return (
     <section 
       id="about"
-      className="w-full aspect-video bg-cover bg-center bg-no-repeat bg-gray-300 relative"
+      className="w-full aspect-[152/215] md:aspect-video bg-cover bg-center bg-no-repeat bg-gray-300 relative"
       style={{
         backgroundImage: "url('/assets/About/About.png')",
         overflow: 'visible', // Allow Feature Summary header to overlap
       }}
     >
+      {/* Mobile About Section Content */}
+      <div
+        className="md:hidden absolute left-1/2 -translate-x-1/2"
+        style={{
+          top: '145px',
+          width: '326.49px',
+          height: '250px',
+          aspectRatio: '326.49/250.00',
+          zIndex: 5,
+        }}
+      >
+        <div
+          className="relative"
+          style={{
+            width: '100%',
+            height: '100%',
+            backgroundImage: "url('/assets/About/Paper.png')",
+            backgroundPosition: '0px -35px',
+            backgroundSize: '100% 130.596%',
+            backgroundRepeat: 'no-repeat'
+          }}
+        >
+          <div
+            className="absolute flex flex-col justify-center items-center"
+            style={{
+              left: '5px',
+              top: '15px',
+              width: '314.412px',
+              height: '200.081px',
+              padding: '37px 10px',
+              gap: '10px',
+              // border: '1px solid red',
+            }}
+          >
+            <h2
+              style={{
+                color: '#3F3431',
+                WebkitTextFillColor: '#3F3431',
+                fontFamily: 'var(--font-irish-grover), "Irish Grover", cursive',
+                fontSize: '24px',
+                fontStyle: 'normal',
+                fontWeight: 400,
+                lineHeight: 'normal',
+                textAlign: 'center',
+              }}
+            >
+              About PepeLayer
+            </h2>
+            <p
+              style={{
+                width: '214px',
+                flexShrink: 0,
+                color: '#524340',
+                fontFeatureSettings: "'liga' off, 'clig' off",
+                fontFamily: 'var(--font-irish-grover), "Irish Grover", cursive',
+                fontSize: '8px',
+                fontStyle: 'normal',
+                fontWeight: 400,
+                lineHeight: 'normal',
+                textAlign: 'left',
+              }}
+            >
+              PepeLayer is an Ethereum Layer 2 focused on efficient on-chain coordination. It inherits Ethereum security while reducing execution costs and increasing throughput. The native token aligns contributors, liquidity and participation through shared incentives. Value generated in the network cycles back to those who strengthen it, ensuring that contribution drives growth and influence.
+            </p>
+          </div>
+          {/* Mobile Buttons */}
+          <div
+            className="absolute left-1/2 -translate-x-1/2 flex gap-2"
+            style={{
+              top: '188px',
+            }}
+          >
+            <button
+              className="flex justify-center items-center"
+              style={{
+                width: '49px',
+                height: '10px',
+                padding: '3px',
+                gap: '10px',
+                borderRadius: '6px',
+                background: 'linear-gradient(180deg, #FFD700 10.16%, #F2A600 50.03%)',
+                boxShadow: '0 2px 2px 0 rgba(255, 255, 255, 0.40) inset, 0 5px 8px 0 rgba(0, 0, 0, 0.25)',
+                border: 'none',
+                cursor: 'pointer',
+              }}
+              type="button"
+            >
+              <span
+                style={{
+                  color: '#524340',
+                  fontFeatureSettings: "'liga' off, 'clig' off",
+                  textShadow: '0 1px 1px rgba(63, 52, 49, 0.50)',
+                  fontFamily: 'var(--font-irish-grover), "Irish Grover", cursive',
+                  fontSize: '7px',
+                  fontStyle: 'normal',
+                  fontWeight: 400,
+                  lineHeight: 'normal',
+                }}
+              >
+                WHITEPAPER
+              </span>
+            </button>
+            <button
+              className="flex justify-center items-center"
+              style={{
+                width: '49px',
+                height: '10px',
+                padding: '3px',
+                gap: '3px',
+                borderRadius: '6px',
+                background: 'linear-gradient(180deg, #FFD700 10.16%, #F2A600 50.03%)',
+                boxShadow: '0 2px 2px 0 rgba(255, 255, 255, 0.40) inset, 0 5px 8px 0 rgba(0, 0, 0, 0.25)',
+                border: 'none',
+                cursor: 'pointer',
+              }}
+              type="button"
+            >
+              <span
+                style={{
+                  color: '#524340',
+                  fontFeatureSettings: "'liga' off, 'clig' off",
+                  textShadow: '0 1px 1px rgba(63, 52, 49, 0.50)',
+                  fontFamily: 'var(--font-irish-grover), "Irish Grover", cursive',
+                  fontSize: '7px',
+                  fontStyle: 'normal',
+                  fontWeight: 400,
+                  lineHeight: 'normal',
+                }}
+              >
+                BUY NOW
+              </span>
+            </button>
+          </div>
+        </div>
+      </div>
+      
       {/* Responsive wrapper container - scales all content proportionally */}
       <div
+        className="hidden md:block"
         style={{
           width: `${baseWidth}px`,
           height: '1080px', // Base height for 16:9 aspect ratio (1920x1080)

@@ -22,9 +22,8 @@ export default function Tokenomics() {
   return (
     <section 
       id="tokenomics"
-      className="w-full bg-cover bg-center bg-no-repeat bg-gray-300 relative overflow-hidden"
+      className="w-full aspect-[152/215] md:aspect-video bg-cover bg-center bg-no-repeat bg-gray-300 relative overflow-hidden"
       style={{
-        aspectRatio: '1919/1080',
         backgroundImage: "url('/assets/Token/TOKENOMICS.png')",
       }}
     >
@@ -136,6 +135,116 @@ export default function Tokenomics() {
       </div>
       </div>
       {/* End of responsive wrapper */}
+      
+      {/* Mobile Tokenomics Content */}
+      <div
+        className="md:hidden absolute left-1/2 -translate-x-1/2"
+        style={{
+          top: 'clamp(30px, 8vw, 60px)',
+          width: '92vw',
+          maxWidth: '605px',
+          position: 'relative',
+          zIndex: 5,
+        }}
+      >
+        {/* Mobile Header title section */}
+        <div
+          className="flex flex-col justify-center items-center"
+          style={{
+            width: '100%',
+            padding: 'clamp(8px, 2.6vw, 10px)',
+            gap: 'clamp(20px, 15.4vw, 59px)',
+            marginBottom: 'clamp(20px, 13.5vw, 50px)',
+          }}
+        >
+          <h2
+            style={{
+              color: '#FFF',
+              fontFeatureSettings: "'liga' off, 'clig' off",
+              textShadow: '0 4px 4px rgba(0, 0, 0, 0.25)',
+              fontFamily: 'var(--font-irish-grover), "Irish Grover", cursive',
+              fontSize: 'clamp(32px, 10vw, 96px)',
+              fontStyle: 'normal',
+              fontWeight: 400,
+              lineHeight: 'clamp(20px, 6.25vw, 40px)',
+              textTransform: 'uppercase',
+              margin: 0,
+              textAlign: 'center'
+            }}
+          >
+            TOKENOMICS
+          </h2>
+          <p
+            style={{
+              marginTop: "-40px",
+              color: '#FFF',
+              fontFeatureSettings: "'liga' off, 'clig' off",
+              fontFamily: 'var(--font-irish-grover), "Irish Grover", cursive',
+              fontSize: 'clamp(14px, 4.2vw, 40px)',
+              fontStyle: 'normal',
+              fontWeight: 400,
+              lineHeight: 'normal',
+              margin: 0,
+              textAlign: 'center',
+            }}
+          >
+            The Economy Of The Empire
+          </p>
+        </div>
+        
+        {/* Mobile Donut chart section */}
+        <div
+          className="flex justify-center items-center"
+          style={{
+            width: '100%',
+            marginTop: 'clamp(130px, 6.25vw, 30px)',
+          }}
+        >
+          <div
+            style={{
+              width: 'clamp(142px, 44.5vw, 175px)',
+              height: 'clamp(142px, 44.5vw, 175px)',
+              aspectRatio: '1/1',
+            }}
+          >
+            <img
+              src="/assets/Token/Donut chart.png"
+              alt="Donut chart"
+              style={{
+                width: '100%',
+                height: '100%',
+                objectFit: 'cover',
+              }}
+            />
+          </div>
+        </div>
+        
+        {/* Mobile Group Tokenomic section */}
+        <div
+          className="flex justify-center items-center"
+          style={{
+            width: '100%',
+          }}
+        >
+          <div
+            style={{
+              width: 'clamp(250px, 67.3vw, 407px)',
+              height: 'clamp(150px, 40.3vw, 244px)',
+              aspectRatio: '407/244',
+            }}
+          >
+            <img
+              src="/assets/Token/Group Tokenomics.png"
+              alt="Group Tokenomics"
+              style={{
+                width: '100%',
+                height: '100%',
+                objectFit: 'cover',
+              }}
+            />
+          </div>
+        </div>
+      </div>
     </section>
   )
 }

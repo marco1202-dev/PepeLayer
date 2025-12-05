@@ -22,9 +22,8 @@ export default function StakingSection() {
 
   return (
     <section 
-      className="w-full bg-cover bg-center bg-no-repeat bg-gray-300 relative overflow-hidden"
+      className="w-full aspect-[152/215] md:aspect-video bg-cover bg-center bg-no-repeat bg-gray-300 relative overflow-hidden"
       style={{
-        aspectRatio: '3/2',
         backgroundImage: "url('/assets/Staking/staking.png')",
         backgroundPosition: '50%',
         backgroundSize: 'cover',

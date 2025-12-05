@@ -187,6 +187,678 @@ export default function HeroSection() {
         </div>
       </div>
       
+      {/* Mobile Hero Text - PEPELAYER IS A SIGNAL */}
+      <div
+        className="md:hidden absolute left-1/2 -translate-x-1/2"
+        style={{
+          top: '100px',
+          zIndex: 10,
+          whiteSpace: 'nowrap',
+        }}
+      >
+        <span
+          style={{
+            color: '#FFF',
+            textAlign: 'center',
+            fontFeatureSettings: "'liga' off, 'clig' off",
+            textShadow: '1px 1px 5px #3F3431',
+            WebkitTextStrokeWidth: '2px',
+            WebkitTextStrokeColor: '#3F3431',
+            fontFamily: 'var(--font-geologica), "Geologica", sans-serif',
+            fontSize: '20px',
+            fontStyle: 'normal',
+            fontWeight: 400,
+            lineHeight: 'normal',
+            display: 'inline-block',
+          }}
+        >
+          PEPELAYER IS A SIGNAL
+        </span>
+      </div>
+      
+      {/* Mobile Hero Text - Identity Becomes Infrastructure */}
+      <div
+        className="flex md:hidden absolute left-1/2 -translate-x-1/2 justify-center items-center"
+        style={{
+          top: '140px',
+          width: '248px',
+          height: '24px',
+          aspectRatio: '31/3',
+          zIndex: 10,
+          position: 'relative',
+        }}
+      >
+        <span
+          className="absolute"
+          style={{
+            left: 0,
+            top: 0,
+            width: '100%',
+            height: '100%',
+            WebkitTextStrokeWidth: '5px',
+            WebkitTextStrokeColor: '#FFEB12',
+            WebkitTextFillColor: 'transparent',
+            textAlign: 'center',
+            fontFeatureSettings: "'liga' off, 'clig' off",
+            fontFamily: 'var(--font-irish-grover), "Irish Grover", cursive',
+            fontSize: '16px',
+            fontStyle: 'normal',
+            fontWeight: 600,
+            lineHeight: 'normal',
+            pointerEvents: 'none',
+          }}
+        >
+          Identity Becomes Infrastructure
+        </span>
+        <span
+          className="absolute z-10"
+          style={{
+            left: 0,
+            top: 0,
+            width: '100%',
+            height: '100%',
+            color: '#6CAF58',
+            WebkitTextFillColor: '#6CAF58',
+            textAlign: 'center',
+            fontFeatureSettings: "'liga' off, 'clig' off",
+            // textShadow: '1px 1px 5px #3F3431',
+            fontFamily: 'var(--font-irish-grover), "Irish Grover", cursive',
+            fontSize: '16px',
+            fontStyle: 'normal',
+            fontWeight: 400,
+            lineHeight: 'normal',
+          }}
+        >
+          Identity Becomes Infrastructure
+        </span>
+      </div>
+      
+      {/* Mobile Hero.png Image */}
+      <div
+        className="md:hidden absolute"
+        style={{
+          left: '265px',
+          top: '378px',
+          width: '159px',
+          height: '225px',
+          aspectRatio: '53/75',
+          zIndex: 10,
+        }}
+      >
+        <div
+          style={{
+            width: '100%',
+            height: '100%',
+            backgroundImage: "url('/assets/Hero/Hero.png')",
+            backgroundPosition: '-9.164px -31px',
+            backgroundSize: '136.056% 136%',
+            backgroundRepeat: 'no-repeat',
+          }}
+        />
+      </div>
+      
+      {/* Mobile Shield Section */}
+      <div
+        className="md:hidden absolute left-1/2 -translate-x-1/2"
+        style={{
+          top: '230px',
+          width: '265px',
+          height: '312px',
+          aspectRatio: '265/312',
+          zIndex: 5,
+        }}
+      >
+        <img
+          src="/assets/Hero/Vector.png"
+          alt="Shield"
+          style={{
+            width: '100%',
+            height: '100%',
+            objectFit: 'cover',
+            filter: 'drop-shadow(0 4px 10px rgba(0, 0, 0, 0.45))',
+          }}
+        />
+        
+        {/* Mobile Price section */}
+        <div
+          className="absolute"
+          style={{
+            left: '55px',
+            top: '30px',
+            display: 'flex',
+            alignItems: 'center',
+            gap: '3px',
+          }}
+        >
+          <span
+            style={{
+              color: '#928D86',
+              fontFeatureSettings: "'liga' off, 'clig' off",
+              fontFamily: 'var(--font-irish-grover), "Irish Grover", cursive',
+              fontSize: '12px',
+              fontStyle: 'normal',
+              fontWeight: 400,
+              lineHeight: 'normal',
+            }}
+          >
+            $PEPELAYER PRICE=
+          </span>
+          <span
+            style={{
+              color: '#928D86',
+              fontFeatureSettings: "'liga' off, 'clig' off",
+              fontFamily: 'var(--font-irish-grover), "Irish Grover", cursive',
+              fontSize: '12px',
+              fontStyle: 'normal',
+              fontWeight: 400,
+              lineHeight: 'normal',
+            }}
+          >
+            $0.000
+          </span>
+        </div>
+        
+        {/* Mobile Until next price increase */}
+        <div
+          className="absolute"
+          style={{
+            left: '30px',
+            top: '43px',
+            width: '210px',
+            height: '24px',
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center',
+            gap: '6px',
+            borderRadius: '4px',
+            border: '2px solid #695455',
+            background: '#928D86',
+            boxShadow: '0 4px 4px 0 rgba(0, 0, 0, 0.25)',
+          }}
+        >
+          <div
+            style={{
+              display: 'flex',
+              width: '180px',
+              height: '15px',
+              padding: '5px 15px 5px 5px',
+              justifyContent: 'center',
+              alignItems: 'center',
+              gap: '10px',
+              borderRadius: '8px',
+              border: '1px solid #524340',
+              background: '#695455',
+              boxShadow: '0 4px 4px 0 rgba(0, 0, 0, 0.25)',
+            }}
+          >
+            <span
+              style={{
+                color: '#3F3431',
+                fontFeatureSettings: "'liga' off, 'clig' off",
+                fontFamily: 'var(--font-irish-grover), "Irish Grover", cursive',
+                fontSize: '11px',
+                fontStyle: 'normal',
+                fontWeight: 400,
+                lineHeight: 'normal',
+              }}
+            >
+              Until next price increase
+            </span>
+          </div>
+          <div
+            style={{
+              width: '15px',
+              height: '15px',
+              backgroundImage: "url('/assets/Hero/Vector_logo.png')",
+              backgroundPosition: '50%',
+              backgroundSize: 'cover',
+              backgroundRepeat: 'no-repeat',
+            }}
+          />
+        </div>
+        
+        {/* Mobile Next Price */}
+        <div
+          className="absolute"
+          style={{
+            left: '40px',
+            top: '73px',
+            display: 'flex',
+            alignItems: 'flex-start',
+            gap: '2px',
+          }}
+        >
+          <span
+            style={{
+              color: '#928D86',
+              fontFeatureSettings: "'liga' off, 'clig' off",
+              fontFamily: 'var(--font-irish-grover), "Irish Grover", cursive',
+              fontSize: '12px',
+              fontStyle: 'normal',
+              fontWeight: 400,
+              lineHeight: 'normal',
+            }}
+          >
+            Next Price:
+          </span>
+          <div
+            style={{
+              width: '90px',
+              height: '14px',
+              padding: '5px',
+              display: 'flex',
+              justifyContent: 'center',
+              alignItems: 'center',
+              borderRadius: '6px',
+              border: '1px solid #695455',
+              background: '#928D86',
+              boxShadow: '0 -2px 2px 0 rgba(169, 152, 138, 0.10) inset, 0 3px 3px 0 rgba(0, 0, 0, 0.30) inset, 0 4px 4px 0 rgba(0, 0, 0, 0.25)',
+            }}
+          >
+            <span
+              style={{
+                color: '#524340',
+                fontFeatureSettings: "'liga' off, 'clig' off",
+                fontFamily: 'var(--font-irish-grover), "Irish Grover", cursive',
+                fontSize: '9px',
+                fontStyle: 'normal',
+                fontWeight: 400,
+                lineHeight: 'normal',
+              }}
+            >
+              $0.00
+            </span>
+          </div>
+        </div>
+        
+        {/* Mobile PAY WITH ETH */}
+        <div
+          className="absolute"
+          style={{
+            left: '30px',
+            top: '92px',
+            color: '#928D86',
+            fontFeatureSettings: "'liga' off, 'clig' off",
+            fontFamily: 'var(--font-irish-grover), "Irish Grover", cursive',
+            fontSize: '10px',
+            fontStyle: 'normal',
+            fontWeight: 400,
+            lineHeight: 'normal',
+          }}
+        >
+          PAY WITH ETH
+        </div>
+        
+        {/* Mobile ETH Input */}
+        <div
+          className="absolute"
+          style={{
+            left: '30px',
+            top: '106px',
+            display: 'flex',
+            gap: '3px',
+          }}
+        >
+          <div
+            style={{
+              width: '145px',
+              height: '25px',
+              padding: '5px',
+              display: 'flex',
+              justifyContent: 'space-between',
+              alignItems: 'center',
+              gap: '70px',
+              borderRadius: '6px',
+              border: '1px solid #695455',
+              background: '#928D86',
+              boxShadow: '0 -2px 2px 0 rgba(169, 152, 138, 0.10) inset, 0 3px 3px 0 rgba(0, 0, 0, 0.30) inset, 0 4px 4px 0 rgba(0, 0, 0, 0.25)',
+            }}
+          >
+            <span
+              style={{
+                color: '#524340',
+                fontFeatureSettings: "'liga' off, 'clig' off",
+                fontFamily: 'var(--font-irish-grover), "Irish Grover", cursive',
+                fontSize: '15px',
+                fontStyle: 'normal',
+                fontWeight: 400,
+                lineHeight: 'normal',
+              }}
+            >
+              0
+            </span>
+            <span
+              style={{
+                color: '#524340',
+                fontFeatureSettings: "'liga' off, 'clig' off",
+                fontFamily: 'var(--font-irish-grover), "Irish Grover", cursive',
+                fontSize: '12px',
+                fontStyle: 'normal',
+                fontWeight: 400,
+                lineHeight: 'normal',
+              }}
+            >
+              MAX
+            </span>
+          </div>
+          <div
+            style={{
+              width: '63px',
+              height: '25px',
+              padding: '5px 7px',
+              display: 'flex',
+              alignItems: 'center',
+              gap: '2px',
+              borderRadius: '4px',
+              border: '1px solid #695455',
+              background: '#928D86',
+              boxShadow: '0 3px 3px 0 rgba(0, 0, 0, 0.30) inset, 0 -2px 2px 0 rgba(169, 152, 138, 0.10) inset, 0 4px 4px 0 rgba(0, 0, 0, 0.25)',
+            }}
+          >
+            <div
+              style={{
+                width: '15px',
+                height: '15px',
+                backgroundImage: "url('/assets/Hero/ETH.png')",
+                backgroundPosition: '50%',
+                backgroundSize: 'cover',
+                backgroundRepeat: 'no-repeat',
+              }}
+            />
+            <span
+              style={{
+                color: '#524340',
+                fontFeatureSettings: "'liga' off, 'clig' off",
+                fontFamily: 'var(--font-irish-grover), "Irish Grover", cursive',
+                fontSize: '9px',
+                fontStyle: 'normal',
+                fontWeight: 400,
+                lineHeight: 'normal',
+              }}
+            >
+              ETH
+            </span>
+          </div>
+        </div>
+        
+        {/* Mobile YOU RECEIVE */}
+        <div
+          className="absolute"
+          style={{
+            left: '30px',
+            top: '133px',
+            color: '#928D86',
+            fontFeatureSettings: "'liga' off, 'clig' off",
+            fontFamily: 'var(--font-irish-grover), "Irish Grover", cursive',
+            fontSize: '10px',
+            fontStyle: 'normal',
+            fontWeight: 400,
+            lineHeight: 'normal',
+          }}
+        >
+          YOU RECEIVE
+        </div>
+        
+        {/* Mobile Receive Input */}
+        <div
+          className="absolute"
+          style={{
+            left: '30px',
+            top: '147px',
+            width: '210px',
+            height: '25px',
+            padding: '10px 185px 5px 0px',
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center',
+            gap: '85px',
+            borderRadius: '4px',
+            border: '1px solid #695455',
+            background: '#928D86',
+            boxShadow: '0 3px 3px 0 rgba(0, 0, 0, 0.30) inset, 0 -2px 2px 0 rgba(169, 152, 138, 0.10) inset, 0 4px 4px 0 rgba(0, 0, 0, 0.25)',
+          }}
+        >
+          <span
+            style={{
+              color: '#524340',
+              fontFeatureSettings: "'liga' off, 'clig' off",
+              fontFamily: 'var(--font-irish-grover), "Irish Grover", cursive',
+              fontSize: '15px',
+              fontStyle: 'normal',
+              fontWeight: 400,
+              lineHeight: 'normal',
+            }}
+          >
+            0
+          </span>
+        </div>
+        
+        {/* Mobile Buy & Stake button */}
+        <button
+          className="absolute left-1/2 -translate-x-1/2"
+          type="button"
+          style={{
+            top: '183px',
+            display: 'flex',
+            width: '143.234px',
+            height: '23px',
+            padding: '5px',
+            justifyContent: 'center',
+            alignItems: 'center',
+            gap: '5px',
+            borderRadius: '4px',
+            background: 'linear-gradient(180deg, #FFD900 10.16%, #F27900 50.03%)',
+            boxShadow: '0 2px 2px 0 rgba(255, 255, 255, 0.40) inset, 0 5px 8px 0 rgba(0, 0, 0, 0.25)',
+            border: 'none',
+            cursor: 'pointer',
+          }}
+        >
+          <span
+            style={{
+              color: '#524340',
+              textShadow: '0 1px 1px rgba(63, 52, 49, 0.50)',
+              fontFamily: 'var(--font-irish-grover), "Irish Grover", cursive',
+              fontSize: '7px',
+              fontStyle: 'normal',
+              fontWeight: 400,
+              lineHeight: 'normal',
+            }}
+          >
+            Buy & Stake For 800% Rewards
+          </span>
+        </button>
+        
+        {/* Mobile BUY $PLR button */}
+        <button
+          className="absolute left-1/2 -translate-x-1/2"
+          type="button"
+          style={{
+            top: '212px',
+            display: 'flex',
+            width: '143.234px',
+            height: '23px',
+            padding: '5px',
+            justifyContent: 'center',
+            alignItems: 'center',
+            gap: '5px',
+            borderRadius: '4px',
+            background: 'linear-gradient(180deg, #FFD700 10.16%, #F2A600 50.03%)',
+            boxShadow: '0 2px 2px 0 rgba(255, 255, 255, 0.40) inset, 0 5px 8px 0 rgba(0, 0, 0, 0.25)',
+            border: 'none',
+            cursor: 'pointer',
+          }}
+        >
+          <span
+            style={{
+              color: '#524340',
+              fontFeatureSettings: "'liga' off, 'clig' off",
+              textShadow: '0 1px 1px rgba(63, 52, 49, 0.50)',
+              fontFamily: 'var(--font-irish-grover), "Irish Grover", cursive',
+              fontSize: '15px',
+              fontStyle: 'normal',
+              fontWeight: 400,
+              lineHeight: 'normal',
+            }}
+          >
+            BUY $PLR
+          </span>
+        </button>
+        
+        {/* Mobile Balance section */}
+        <div
+          className="absolute left-1/2 -translate-x-1/2"
+          style={{
+            top: '238px',
+            display: 'flex',
+            alignItems: 'flex-end',
+            gap: '3px',
+          }}
+        >
+          <span
+            style={{
+              color: '#FFF',
+              fontFeatureSettings: "'liga' off, 'clig' off",
+              fontFamily: 'var(--font-irish-grover), "Irish Grover", cursive',
+              fontSize: '10px',
+              fontStyle: 'normal',
+              fontWeight: 400,
+              lineHeight: 'normal',
+            }}
+          >
+            Balance:
+          </span>
+          <div
+            style={{
+              width: '17px',
+              height: '15px',
+              backgroundImage: "url('/assets/Hero/Vector_logo.png')",
+              backgroundPosition: '50%',
+              backgroundSize: 'cover',
+              backgroundRepeat: 'no-repeat',
+            }}
+          />
+          <span
+            style={{
+              color: '#FFF',
+              fontFeatureSettings: "'liga' off, 'clig' off",
+              fontFamily: 'var(--font-irish-grover), "Irish Grover", cursive',
+              fontSize: '10px',
+              fontStyle: 'normal',
+              fontWeight: 400,
+              lineHeight: 'normal',
+            }}
+          >
+            000000000
+          </span>
+        </div>
+      </div>
+      
+      {/* Mobile Social Icons */}
+      <div
+        className="md:hidden absolute left-1/2 -translate-x-1/2 flex items-center gap-2"
+        style={{
+          bottom: '5px',
+          zIndex: 10,
+        }}
+      >
+        <div
+          className="flex items-center justify-center"
+          style={{
+            width: '36px',
+            height: '33px',
+            padding: '5px',
+            gap: '5px',
+            borderRadius: '2px',
+            border: '2px solid #695455',
+            background: '#928D86',
+            boxShadow: '0 4px 4px 0 rgba(0, 0, 0, 0.25)',
+          }}
+        >
+          <img
+            src="/assets/Hero/X.svg"
+            alt="X"
+            className="social-icon"
+            style={{
+              width: '10px',
+              height: '10px',
+              flexShrink: 0,
+            }}
+          />
+        </div>
+        <div
+          className="flex items-center justify-center"
+          style={{
+            width: '36px',
+            height: '33px',
+            padding: '5px',
+            gap: '5px',
+            borderRadius: '2px',
+            border: '2px solid #695455',
+            background: '#928D86',
+            boxShadow: '0 4px 4px 0 rgba(0, 0, 0, 0.25)',
+          }}
+        >
+          <img
+            src="/assets/Hero/Tg.svg"
+            alt="Telegram"
+            className="social-icon"
+            style={{
+              width: '10px',
+              height: '10px',
+              flexShrink: 0,
+            }}
+          />
+        </div>
+        <div
+          className="flex items-center justify-center"
+          style={{
+            width: '36px',
+            height: '33px',
+            padding: '5px',
+            gap: '5px',
+            borderRadius: '2px',
+            border: '2px solid #695455',
+            background: '#928D86',
+            boxShadow: '0 4px 4px 0 rgba(0, 0, 0, 0.25)',
+          }}
+        >
+          <img
+            src="/assets/Hero/tw.svg"
+            alt="Twitter"
+            className="social-icon"
+            style={{
+              width: '10px',
+              height: '10px',
+              flexShrink: 0,
+            }}
+          />
+        </div>
+        <div
+          className="flex items-center justify-center"
+          style={{
+            width: '36px',
+            height: '33px',
+            padding: '5px',
+            gap: '5px',
+            borderRadius: '2px',
+            border: '2px solid #695455',
+            background: '#928D86',
+            boxShadow: '0 4px 4px 0 rgba(0, 0, 0, 0.25)',
+          }}
+        >
+          <img
+            src="/assets/Hero/insta.svg"
+            alt="Instagram"
+            className="social-icon"
+            style={{
+              width: '10px',
+              height: '10px',
+              flexShrink: 0,
+            }}
+          />
+        </div>
+      </div>
+      
       {/* Responsive wrapper container - scales all content proportionally (desktop only) */}
       <div
         className="hidden md:block"
