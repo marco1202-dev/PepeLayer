@@ -1,0 +1,44 @@
+﻿@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Ensure navbar menu items have white text fill color when using text stroke */
+.navbar-menu-item {
+  -webkit-text-fill-color: #FFFFFF !important;
+  color: #FFFFFF !important;
+  paint-order: fill stroke !important;
+  -webkit-paint-order: fill stroke !important;
+}
+
+.navbar-menu-item .navbar-menu-stroke {
+  -webkit-text-stroke-width: 8px !important;
+  -webkit-text-stroke-color: #3F3431 !important;
+}
+
+/* Ensure hero text fill colors are visible */
+.hero-text-fill {
+  -webkit-text-fill-color: #6CAF58 !important;
+  color: #6CAF58 !important;
+}
+
+/* Social icon fill color */
+.social-icon {
+  filter: brightness(0) saturate(100%) invert(28%) sepia(8%) saturate(1000%) hue-rotate(340deg) brightness(0.9);
+}
+
+/* HeroBar scrolling animation */
+@keyframes scroll-horizontal {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.hero-bar-scroll {
+  animation: scroll-horizontal 30s linear infinite;
+  display: flex;
+  will-change: transform;
+}
+
